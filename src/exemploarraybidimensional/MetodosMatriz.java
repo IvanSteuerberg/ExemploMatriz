@@ -58,9 +58,45 @@ public void amosarTodo(int[][]taboa,String[]alumnos,String[]modulos){
     
 }
 
+public int[] mediaAlumno(int[][]taboa){
+int[]mediaAlum= new int[taboa.length];       
+ for (int f=0;f<taboa.length;f++){
+      for(int c=0;c<taboa[f].length;c++){
+         mediaAlum[f]=mediaAlum[f]+taboa[f][c];  
+         
+      }
+      mediaAlum[f]=mediaAlum[f]/4;
+    }   
+return mediaAlum;
+}
+public void amosarMediaAlum(int[]taboa){
+    System.out.println("\nMedia alumnos: ");
+    for (int i=0;i<taboa.length;i++){
+    System.out.print(taboa[i]+"  ");
+     
+      }    
+    }
 
+public int[] mediaModulos(int[][]taboa){
+int[]mediaModulos= new int[4];
+int acu=0;
+ for (int c=0;c<mediaModulos.length;c++){ 
+ acu=0;
+ for(int f=0;f<taboa.length;f++){
+ acu=acu+taboa[f][c];
+ }
+ mediaModulos[c]=acu/3;
+ }
+return mediaModulos;
+}
 
-
+public void amosarMediaModulos(int[]taboa){
+    System.out.println("\nMedia modulos: ");
+    for (int i=0;i<taboa.length;i++){
+    System.out.print(taboa[i]+"  ");
+     
+      }    
+    }
 
 
 }

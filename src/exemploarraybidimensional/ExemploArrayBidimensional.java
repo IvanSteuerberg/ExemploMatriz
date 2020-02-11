@@ -15,7 +15,7 @@ int opcion;
 MetodosMatriz obx = new MetodosMatriz();
 do{
 opcion = Integer.parseInt(JOptionPane.showInputDialog("***MENU***\n1--> crear matriz"
-+"\n2--> amosar \n3--> amosar todo \n4--> Sair \n Teclea a opcion"));
++"\n2--> amosar \n3--> amosar todo\n4-->Media Alumnos\n5-->Media Modulos \n6--> Sair \n Teclea a opcion"));
 switch(opcion){
  case 1:
     matriz = obx.crearMatriz(matriz);
@@ -27,9 +27,15 @@ switch(opcion){
      obx.amosarTodo(matriz, alumnos, modulos);
      break;
  case 4:
+     obx.amosarMediaAlum(obx.mediaAlumno(matriz));
+     break;
+ case 5:
+     obx.amosarMediaModulos(obx.mediaModulos(matriz));
+     break;
+ case 6:
     obx.sair();
  }
-}while(opcion<4);
+}while(opcion<6);
         
 }
     
